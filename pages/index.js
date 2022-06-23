@@ -42,7 +42,7 @@ const getCoordinates = async (address, entry) => {
     "https://maps.googleapis.com/maps/api/geocode/json?address=" +
       address +
       "&key=" +
-      "AIzaSyB2PmNfNRakro9TLDS-8PC7keJGB6mAB_U"
+      process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY
   );
   const data = await res.json();
   const lat = data.results[0].geometry.location.lat;
